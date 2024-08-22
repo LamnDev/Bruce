@@ -178,20 +178,20 @@ void boot_screen() {
     }
   }
 
-#if !defined(LITE_VERSION)
-  #if defined(BUZZ_PIN)
+//#if !defined(LITE_VERSION)
+  //#if defined(BUZZ_PIN)
     // Bip M5 just because it can. Does not bip if splashscreen is bypassed
-    _tone(5000, 50);
-    delay(200);
-    _tone(5000, 50);
+    //_tone(5000, 50);
+    //delay(200);
+    //_tone(5000, 50);
   /*  2fix: menu infinite loop */
-  #elif defined(HAS_NS4168_SPKR)
+  //#elif defined(HAS_NS4168_SPKR)
     // play a boot sound
-    if(SD.exists("/boot.wav")) playAudioFile(&SD, "/boot.wav");
-    else if(LittleFS.exists("/boot.wav")) playAudioFile(&LittleFS, "/boot.wav");
-    setup_gpio(); // temp fix for menu inf. loop
-  #endif
-#endif
+    //if(SD.exists("/boot.wav")) playAudioFile(&SD, "/boot.wav");
+    //else if(LittleFS.exists("/boot.wav")) playAudioFile(&LittleFS, "/boot.wav");
+    //setup_gpio(); // temp fix for menu inf. loop
+  //#endif
+//#endif
 }
 
 
